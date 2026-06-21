@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jornada Estratégica DER™ — Método D.E.R.™</title>
+  <meta name="description" content="Área de acesso exclusivo da Jornada Estratégica DER™. Método D.E.R.™ — Arquitetura de Liderança Feminina." />
+  <style>
+    /* ─── Reset & Base ─── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --gold:    #C8A24D;
+      --gold-light: #D9B96A;
+      --gold-dark:  #A8822D;
+      --red:     #A32020;
+      --off-white: #F8F5F0;
+      --beige:   #EAE3D8;
+      --graphite: #2E2E2E;
+      --graphite-light: #4A4A4A;
+      --white:   #FFFFFF;
+
+      --font-serif: Georgia, 'Times New Roman', serif;
+      --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+      --spacing-xs:  0.5rem;
+      --spacing-sm:  1rem;
+      --spacing-md:  2rem;
+      --spacing-lg:  3rem;
+      --spacing-xl:  5rem;
+
+      --max-width: 1120px;
+      --radius-sm: 2px;
+      --radius-md: 4px;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--off-white);
+      color: var(--graphite);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ─── Typography ─── */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: normal;
+      letter-spacing: 0.03em;
+      line-height: 1.25;
+    }
+
+    p {
+      font-family: var(--font-sans);
+      line-height: 1.75;
+    }
+
+    /* ─── Utility ─── */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--spacing-md);
+    }
+
+    .gold-rule {
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto;
+    }
+
+    .gold-rule--left {
+      margin: 0;
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      background-color: var(--graphite);
+      background-image:
+        radial-gradient(ellipse 120% 80% at 50% 0%, rgba(200, 162, 77, 0.08) 0%, transparent 70%),
+        linear-gradient(180deg, #1a1a1a 0%, var(--graphite) 100%);
+      color: var(--off-white);
+      padding: 6rem var(--spacing-md) 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 79px,
+        rgba(200, 162, 77, 0.04) 80px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 79px,
+        rgba(200, 162, 77, 0.04) 80px
+      );
+      pointer-events: none;
+    }
+
+    .hero__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.75rem;
+    }
+
+    .hero__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: normal;
+      letter-spacing: 0.04em;
+      color: var(--off-white);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero__title span {
+      color: var(--gold);
+    }
+
+    .hero__rule {
+      width: 64px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 1.75rem auto;
+    }
+
+    .hero__method {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero__subtitle {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 2.2vw, 1.35rem);
+      font-weight: normal;
+      letter-spacing: 0.06em;
+      color: rgba(248, 245, 240, 0.65);
+      margin-bottom: 2.25rem;
+    }
+
+    .hero__authors {
+      margin-top: 2.5rem;
+    }
+
+    .hero__authors-names {
+      font-family: var(--font-serif);
+      font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+      letter-spacing: 0.08em;
+      color: var(--off-white);
+      margin-bottom: 0.35rem;
+    }
+
+    .hero__authors-role {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(200, 162, 77, 0.75);
+    }
+
+    .hero__quote-wrap {
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(200, 162, 77, 0.2);
+    }
+
+    .hero__quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-style: italic;
+      font-weight: normal;
+      letter-spacing: 0.02em;
+      color: rgba(248, 245, 240, 0.55);
+      line-height: 1.6;
+    }
+
+    /* ─── Welcome Section ─── */
+    .welcome {
+      background-color: var(--beige);
+      padding: 5rem var(--spacing-md);
+      border-bottom: 1px solid rgba(200, 162, 77, 0.15);
+    }
+
+    .welcome__inner {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .welcome__label {
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .welcome__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      color: var(--graphite);
+      margin-bottom: 1rem;
+    }
+
+    .welcome__rule {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 1.25rem auto 2rem;
+    }
+
+    .welcome__text {
+      font-size: 1rem;
+      color: var(--graphite-light);
+      line-height: 1.85;
+      margin-bottom: 0.75rem;
+    }
+
+    .welcome__cta {
+      margin-top: 2rem;
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--graphite);
+    }
+
+    /* ─── Cards Section ─── */
+    .cards-section {
+      background-color: var(--off-white);
+      padding: 5rem var(--spacing-md) 6rem;
+    }
+
+    .cards-section__header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .cards-section__label {
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .cards-section__title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      color: var(--graphite);
+      letter-spacing: 0.03em;
+    }
+
+    .cards-section__rule {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 1.25rem auto 0;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* ─── Card ─── */
+    .card {
+      background-color: var(--white);
+      border: 1px solid rgba(200, 162, 77, 0.18);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 48px rgba(46, 46, 46, 0.1);
+      border-color: rgba(200, 162, 77, 0.45);
+    }
+
+    .card__accent {
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+    }
+
+    .card__body {
+      padding: 2.5rem 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card__number {
+      font-family: var(--font-serif);
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      color: rgba(200, 162, 77, 0.5);
+      margin-bottom: 1.25rem;
+    }
+
+    .card__rule {
+      width: 24px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+
+    .card__label {
+      font-family: var(--font-sans);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+
+    .card__title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: normal;
+      letter-spacing: 0.02em;
+      color: var(--graphite);
+      margin-bottom: 0.2rem;
+      line-height: 1.3;
+    }
+
+    .card__subtitle {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 1.5rem;
+    }
+
+    .card__separator {
+      width: 100%;
+      height: 1px;
+      background: var(--beige);
+      margin-bottom: 1.5rem;
+    }
+
+    .card__description {
+      font-size: 0.9rem;
+      color: var(--graphite-light);
+      line-height: 1.8;
+      flex: 1;
+      margin-bottom: 2rem;
+    }
+
+    .card__footer {
+      padding: 0 2rem 2.25rem;
+    }
+
+    .btn-primary {
+      display: block;
+      width: 100%;
+      padding: 0.9rem 1.5rem;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--graphite);
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--gold);
+      color: var(--graphite);
+      border-color: var(--gold);
+    }
+
+    /* ─── Consultoria Section ─── */
+    .consultoria {
+      background-color: var(--graphite);
+      background-image:
+        radial-gradient(ellipse 100% 60% at 50% 100%, rgba(200, 162, 77, 0.06) 0%, transparent 70%),
+        linear-gradient(180deg, #252525 0%, var(--graphite) 100%);
+      padding: 7rem var(--spacing-md) 6rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .consultoria::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 4rem;
+      background: linear-gradient(180deg, transparent, rgba(200, 162, 77, 0.4));
+    }
+
+    .consultoria::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 79px,
+        rgba(200, 162, 77, 0.025) 80px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 79px,
+        rgba(200, 162, 77, 0.025) 80px
+      );
+      pointer-events: none;
+    }
+
+    .consultoria__inner {
+      max-width: 760px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .consultoria__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+
+    .consultoria__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: normal;
+      letter-spacing: 0.05em;
+      color: var(--off-white);
+      margin-bottom: 0.5rem;
+    }
+
+    .consultoria__subtitle {
+      font-family: var(--font-serif);
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      font-style: italic;
+      font-weight: normal;
+      letter-spacing: 0.04em;
+      color: rgba(200, 162, 77, 0.75);
+      margin-bottom: 0;
+    }
+
+    .consultoria__rule {
+      width: 56px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 2rem auto 2.5rem;
+    }
+
+    .consultoria__text {
+      font-size: 0.97rem;
+      color: rgba(248, 245, 240, 0.62);
+      line-height: 1.9;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .consultoria__text--highlight {
+      color: rgba(248, 245, 240, 0.82);
+      font-size: 0.97rem;
+      line-height: 1.9;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .consultoria__divider {
+      width: 32px;
+      height: 1px;
+      background: rgba(200, 162, 77, 0.3);
+      margin: 2rem 0 2rem;
+    }
+
+    .consultoria__list-label {
+      font-family: var(--font-sans);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    .consultoria__list {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 1.25rem;
+    }
+
+    .consultoria__list li {
+      font-family: var(--font-sans);
+      font-size: 0.94rem;
+      color: rgba(248, 245, 240, 0.75);
+      line-height: 1.7;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid rgba(200, 162, 77, 0.1);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+    }
+
+    .consultoria__list li:last-child {
+      border-bottom: none;
+    }
+
+    .consultoria__list li::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-top: 0.58em;
+      flex-shrink: 0;
+    }
+
+    .consultoria__cta {
+      margin-top: 3.5rem;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      padding: 1.2rem 3.5rem;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+      border: none;
+      color: #1a1a1a;
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 24px rgba(200, 162, 77, 0.25);
+    }
+
+    .btn-cta:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(200, 162, 77, 0.35);
+    }
+
+    .consultoria__disclaimer {
+      margin-top: 1.5rem;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      color: rgba(248, 245, 240, 0.32);
+      line-height: 1.7;
+      letter-spacing: 0.01em;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ─── Footer ─── */
+    .footer {
+      background-color: #1a1a1a;
+      padding: 4rem var(--spacing-md) 3rem;
+      text-align: center;
+      border-top: 1px solid rgba(200, 162, 77, 0.12);
+    }
+
+    .footer__logo {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      color: var(--off-white);
+      margin-bottom: 0.25rem;
+    }
+
+    .footer__logo span {
+      color: var(--gold);
+    }
+
+    .footer__method {
+      font-family: var(--font-sans);
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(200, 162, 77, 0.55);
+      margin-bottom: 1.75rem;
+    }
+
+    .footer__rule {
+      width: 32px;
+      height: 1px;
+      background: rgba(200, 162, 77, 0.3);
+      margin: 0 auto 1.75rem;
+    }
+
+    .footer__authors {
+      font-family: var(--font-serif);
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      color: rgba(248, 245, 240, 0.55);
+      margin-bottom: 0.25rem;
+    }
+
+    .footer__authors-role {
+      font-family: var(--font-sans);
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(200, 162, 77, 0.4);
+      margin-bottom: 2.5rem;
+    }
+
+    .footer__quote {
+      font-family: var(--font-serif);
+      font-size: 0.9rem;
+      font-style: italic;
+      color: rgba(248, 245, 240, 0.3);
+      letter-spacing: 0.02em;
+    }
+
+    .footer__copy {
+      margin-top: 2.5rem;
+      font-family: var(--font-sans);
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      color: rgba(248, 245, 240, 0.18);
+      text-transform: uppercase;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 5rem var(--spacing-sm) 4rem;
+      }
+
+      .welcome,
+      .cards-section,
+      .consultoria {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
+      }
+
+      .card__body {
+        padding: 2rem 1.5rem;
+      }
+
+      .card__footer {
+        padding: 0 1.5rem 2rem;
+      }
+
+      .btn-cta {
+        padding: 1.1rem 2rem;
+        display: block;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+        letter-spacing: 0.15em;
+      }
+
+      .consultoria__disclaimer {
+        margin-top: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════ HERO ═══ -->
+  <header class="hero" role="banner">
+    <div class="container">
+      <p class="hero__eyebrow">Área de Acesso Exclusivo</p>
+
+      <h1 class="hero__title">
+        Jornada Estratégica <span>DER™</span>
+      </h1>
+
+      <div class="hero__rule" aria-hidden="true"></div>
+
+      <p class="hero__method">Método D.E.R.™</p>
+      <p class="hero__subtitle">Arquitetura de Liderança Feminina</p>
+
+      <div class="hero__authors">
+        <p class="hero__authors-names">Luana Souza &amp; Ana Rosa Santos</p>
+        <p class="hero__authors-role">Criadoras do Método D.E.R.™</p>
+      </div>
+
+      <div class="hero__quote-wrap">
+        <p class="hero__quote">
+          "Não é sobre crescer.<br>É sobre sustentar."
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════ WELCOME ═══ -->
+  <section class="welcome" aria-label="Mensagem de boas-vindas">
+    <div class="welcome__inner">
+      <p class="welcome__label">Bem-vinda</p>
+      <h2 class="welcome__heading">Sua Jornada Estratégica DER™</h2>
+      <div class="welcome__rule" aria-hidden="true"></div>
+      <p class="welcome__text">
+        A partir de agora você terá acesso às análises que irão ajudá-la a compreender a estrutura da líder, a estrutura do negócio e sua capacidade de sustentar o crescimento que deseja alcançar.
+      </p>
+      <p class="welcome__cta">Escolha abaixo por onde deseja começar.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ CARDS ═══════ -->
+  <section class="cards-section" aria-label="Ferramentas da Jornada">
+    <div class="container">
+      <div class="cards-section__header">
+        <p class="cards-section__label">Suas Ferramentas</p>
+        <h2 class="cards-section__title">Escolha sua Análise</h2>
+        <div class="cards-section__rule" aria-hidden="true"></div>
+      </div>
+
+      <div class="cards-grid">
+
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="card__accent" aria-hidden="true"></div>
+          <div class="card__body">
+            <p class="card__number">01</p>
+            <div class="card__rule" aria-hidden="true"></div>
+            <p class="card__label">Estrutura da Líder</p>
+            <h3 class="card__title">Diagnóstico DER™</h3>
+            <p class="card__subtitle">Análise Pessoal</p>
+            <div class="card__separator" aria-hidden="true"></div>
+            <p class="card__description">
+              Identifique se hoje você está operando em uma Estrutura de Vidro, Estrutura de Areia ou Estrutura Rocha e compreenda quais aspectos da sua liderança podem estar fortalecendo ou limitando sua capacidade de sustentar crescimento.
+            </p>
+          </div>
+          <div class="card__footer">
+            <a
+              href="https://uncanny-capture-code.lovable.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+              aria-label="Acessar Diagnóstico DER™"
+            >Acessar Diagnóstico</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="card__accent" aria-hidden="true"></div>
+          <div class="card__body">
+            <p class="card__number">02</p>
+            <div class="card__rule" aria-hidden="true"></div>
+            <p class="card__label">Estrutura do Negócio</p>
+            <h3 class="card__title">Leitura Estratégica DER™</h3>
+            <p class="card__subtitle">Análise do Negócio</p>
+            <div class="card__separator" aria-hidden="true"></div>
+            <p class="card__description">
+              Analise os pilares Direção, Estrutura e Resultado para identificar gargalos, oportunidades e prioridades estratégicas do seu negócio.
+            </p>
+          </div>
+          <div class="card__footer">
+            <a
+              href="https://leituraestratgicader.lovable.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+              aria-label="Acessar Leitura Estratégica DER™"
+            >Acessar Leitura Estratégica</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="card__accent" aria-hidden="true"></div>
+          <div class="card__body">
+            <p class="card__number">03</p>
+            <div class="card__rule" aria-hidden="true"></div>
+            <p class="card__label">Capacidade de Sustentação</p>
+            <h3 class="card__title">Raio-X de Sustentação da Líder™</h3>
+            <p class="card__subtitle">Análise de Sustentação</p>
+            <div class="card__separator" aria-hidden="true"></div>
+            <p class="card__description">
+              Descubra o quanto sua estrutura pessoal está preparada para acompanhar e sustentar o crescimento do seu negócio sem sobrecarga ou esgotamento.
+            </p>
+          </div>
+          <div class="card__footer">
+            <a
+              href="https://raio-xsustentaolider.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+              aria-label="Acessar Raio-X de Sustentação da Líder™"
+            >Acessar Raio-X</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ CONSULTORIA ═══ -->
+  <section class="consultoria" aria-label="Consultoria Estratégica DER™">
+    <div class="consultoria__inner">
+      <p class="consultoria__eyebrow">Próximo Passo</p>
+      <h2 class="consultoria__heading">Consultoria Estratégica DER™</h2>
+      <p class="consultoria__subtitle">Transforme clareza em direção estratégica.</p>
+      <div class="consultoria__rule" aria-hidden="true"></div>
+
+      <p class="consultoria__text">
+        Você já deu o primeiro passo.
+      </p>
+      <p class="consultoria__text">
+        Através da Jornada Estratégica DER™, agora possui uma visão mais clara sobre sua liderança, seu negócio e sua capacidade de sustentar crescimento.
+      </p>
+      <p class="consultoria__text">
+        Mas muitas vezes saber o que está acontecendo não é suficiente.
+      </p>
+      <p class="consultoria__text--highlight">
+        O verdadeiro avanço acontece quando existe direcionamento estratégico para transformar diagnóstico em ação.
+      </p>
+      <p class="consultoria__text">
+        Na Consultoria Estratégica DER™, Luana Souza e Ana Rosa Santos analisam seus resultados de forma integrada para identificar prioridades, oportunidades e caminhos possíveis para o próximo ciclo do seu negócio e da sua liderança.
+      </p>
+
+      <div class="consultoria__divider" aria-hidden="true"></div>
+
+      <p class="consultoria__list-label">Durante este encontro, você receberá:</p>
+      <ul class="consultoria__list" aria-label="O que você receberá na Consultoria Estratégica DER™">
+        <li>Análise integrada dos seus resultados</li>
+        <li>Devolutiva estratégica personalizada</li>
+        <li>Identificação de gargalos e oportunidades</li>
+        <li>Direcionamentos práticos para os próximos passos</li>
+        <li>Leitura rápida de posicionamento e comunicação</li>
+        <li>Plano inicial de ação estratégica</li>
+        <li>Encontro online e ao vivo com Luana Souza e Ana Rosa Santos</li>
+      </ul>
+
+      <div class="consultoria__cta">
+        <a
+          href="https://chat.whatsapp.com/DJ8CwGbyoppLKhh8xPEmPp"
+          class="btn-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Quero aprofundar meus resultados — Consultoria Estratégica DER™"
+        >QUERO APROFUNDAR MEUS RESULTADOS</a>
+
+        <p class="consultoria__disclaimer">
+          Após clicar, você será direcionada para falar com nossa equipe e entender se a Consultoria Estratégica DER™ é o próximo passo mais adequado para o seu momento.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ FOOTER ═══ -->
+  <footer class="footer" role="contentinfo">
+    <p class="footer__logo">Método <span>D.E.R.™</span></p>
+    <p class="footer__method">Arquitetura de Liderança Feminina</p>
+    <div class="footer__rule" aria-hidden="true"></div>
+    <p class="footer__authors">Luana Souza &amp; Ana Rosa Santos</p>
+    <p class="footer__authors-role">Criadoras do Método D.E.R.™</p>
+    <p class="footer__quote">"Não é sobre crescer. É sobre sustentar."</p>
+    <p class="footer__copy">&copy; Método D.E.R.™ — Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

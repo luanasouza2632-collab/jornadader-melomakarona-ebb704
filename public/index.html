@@ -290,11 +290,12 @@
     }
 
     .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.75rem;
-      max-width: var(--max-width);
-      margin: 0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,420px));
+    justify-content:center;
+    gap:2rem;
+    max-width:900px;
+    margin:0 auto;
     }
 
     /* ─── Card ─── */
@@ -755,9 +756,12 @@
       <h2 class="welcome__heading">Sua Jornada Estratégica DER™</h2>
       <div class="welcome__rule" aria-hidden="true"></div>
       <p class="welcome__text">
-        A partir de agora você terá acesso às análises que irão ajudá-la a compreender a estrutura da líder, a estrutura do negócio e sua capacidade de sustentar o crescimento que deseja alcançar.
+        A partir de agora você terá acesso às duas leituras que revelam a estrutura do seu negócio e sua capacidade da sua liderança de sustentar o crescimento de forma consistente.
       </p>
-      <p class="welcome__cta">Escolha abaixo por onde deseja começar.</p>
+      <p class="welcome__cta">
+As análises se complementam. Recomendamos começar pela Leitura Estratégica DER™ e, em seguida, realizar o Raio-X da Sustentação da Líder™.
+</p>
+      <p class="welcome__cta">Sua Jornada começa aqui.</p>
     </div>
   </section>
 
@@ -776,36 +780,11 @@
         <article class="card">
           <div class="card__accent" aria-hidden="true"></div>
           <div class="card__body">
-            <p class="card__number">01</p>
-            <div class="card__rule" aria-hidden="true"></div>
-            <p class="card__label">Estrutura da Líder</p>
-            <h3 class="card__title">Diagnóstico DER™</h3>
-            <p class="card__subtitle">Análise Pessoal</p>
-            <div class="card__separator" aria-hidden="true"></div>
-            <p class="card__description">
-              Identifique se hoje você está operando em uma Estrutura de Vidro, Estrutura de Areia ou Estrutura Rocha e compreenda quais aspectos da sua liderança podem estar fortalecendo ou limitando sua capacidade de sustentar crescimento.
-            </p>
-          </div>
-          <div class="card__footer">
-            <a
-              href="https://uncanny-capture-code.lovable.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-primary"
-              aria-label="Acessar Diagnóstico DER™"
-            >Acessar Diagnóstico</a>
-          </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="card">
-          <div class="card__accent" aria-hidden="true"></div>
-          <div class="card__body">
             <p class="card__number">02</p>
             <div class="card__rule" aria-hidden="true"></div>
-            <p class="card__label">Estrutura do Negócio</p>
+            <p class="card__label">Negócio</p>
             <h3 class="card__title">Leitura Estratégica DER™</h3>
-            <p class="card__subtitle">Análise do Negócio</p>
+            <p class="card__subtitle">Diagnóstico Estratégico</p>
             <div class="card__separator" aria-hidden="true"></div>
             <p class="card__description">
               Analise os pilares Direção, Estrutura e Resultado para identificar gargalos, oportunidades e prioridades estratégicas do seu negócio.
@@ -817,20 +796,20 @@
               target="_blank"
               rel="noopener noreferrer"
               class="btn-primary"
-              aria-label="Acessar Leitura Estratégica DER™"
-            >Acessar Leitura Estratégica</a>
+              aria-label="Iniciar Leitura"
+            >Iniciar Leitura</a>
           </div>
         </article>
 
-        <!-- Card 3 -->
+        <!-- Card 2 -->
         <article class="card">
           <div class="card__accent" aria-hidden="true"></div>
           <div class="card__body">
             <p class="card__number">03</p>
             <div class="card__rule" aria-hidden="true"></div>
-            <p class="card__label">Capacidade de Sustentação</p>
+            <p class="card__label">Liderança</p>
             <h3 class="card__title">Raio-X de Sustentação da Líder™</h3>
-            <p class="card__subtitle">Análise de Sustentação</p>
+            <p class="card__subtitle">Raio-X de Sustentação</p>
             <div class="card__separator" aria-hidden="true"></div>
             <p class="card__description">
               Descubra o quanto sua estrutura pessoal está preparada para acompanhar e sustentar o crescimento do seu negócio sem sobrecarga ou esgotamento.
@@ -842,8 +821,8 @@
               target="_blank"
               rel="noopener noreferrer"
               class="btn-primary"
-              aria-label="Acessar Raio-X de Sustentação da Líder™"
-            >Acessar Raio-X</a>
+              aria-label="Iniciar Raio-X"
+            >Iniciar Raio-X</a>
           </div>
         </article>
 
